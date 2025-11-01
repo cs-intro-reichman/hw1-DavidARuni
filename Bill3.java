@@ -9,7 +9,7 @@ public class Bill3 {
 		double bill = Double.parseDouble(args[3]);
 		
 		// Compute each diner's share of the bill.
-		double split = (int) bill / 3;
+		double split = Math.round(bill / 3);
 		
 		System.out.printf("Dear %s, %s, and %s: pay %.1f Shekels each%n",
 							name3, name2, name1, split);
