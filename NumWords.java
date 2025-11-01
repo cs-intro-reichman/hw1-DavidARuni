@@ -17,7 +17,7 @@ public class NumWords {
 		int units = number % 10;
 
 		// Print the result in the desired format.
-		System.out.printf("%d hundreds, %d tens, and %d units.%n", 
+		System.out.printf("%d hundreds, %d tens, and %d ones.%n", 
 							hundreds, tens, units);
 
 	}
