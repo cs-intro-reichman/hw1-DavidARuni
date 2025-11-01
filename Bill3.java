@@ -10,7 +10,8 @@ public class Bill3 {
 		
 		// Compute each diner's share of the bill.
 		double split = bill / 3;
-
-		System.out.println("Dear " + name3 + ", " + name2 + ", and " + name1 + " : pay " + split + " Shekels each");
+		
+		System.out.printf("Dear %s, %s, and %s: pay %.1f Shekels each%n",
+							name3, name2, name1, split);
 	}
 }
