@@ -12,6 +12,29 @@ public class TimeFormat {
 		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
-        // Replace this comment with the rest of your code
+
+		// Some basic validation of the input time format. 00:00 to 23:59
+		if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+			System.out.println("Invalid time format");
+			return;
+		}
+
+		// Set up a string variable to hold either "AM" or "PM".
+		String period;
+		// Now, convert the 24-hour format to the 12-hour format.
+		if (hours == 0) {
+			period = "AM";
+		} else if (hours < 12) {
+			period = "AM";
+		} else if (hours > 12) {
+			period = "PM";
+			hours -= 12;
+		} else { // hours == 12
+			period = "PM";
+		}
+
+		// Finally, print the result in the desired format.
+		System.out.printf("%d:%02d %s%n", 
+							hours, minutes, period);
 	}
 }
